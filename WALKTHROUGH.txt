@@ -1,0 +1,130 @@
+# DocEditor — Video Walkthrough Script
+
+Estimated duration: 4-5 minutes
+
+---
+
+## Scene 1: Login (0:00 - 0:20)
+
+**Voiceover**: "DocEditor is a lightweight browser-based document editor. Let me show you around."
+
+**Actions**:
+- Open http://localhost:3000 in browser
+- Show the login screen with the purple gradient background
+- Point out the three demo accounts listed: alice, bob, charlie
+- Note the password hint: "password123"
+- Select "alice" from the dropdown, click "Sign In"
+
+---
+
+## Scene 2: Document List & Pre-seeded Content (0:20 - 0:45)
+
+**Voiceover**: "Alice is signed in. She has two pre-seeded documents — Welcome Document and Meeting Notes — shown under 'My Documents'. The Welcome Document is also shared with Bob, who has read-only access."
+
+**Actions**:
+- Show the sidebar with "My Documents" section
+- Point out the "Owner" badge on Alice's documents
+- Scroll to "Shared With Me" section (empty for Alice)
+- Show the user info at the bottom: "Signed in as Alice Johnson"
+
+---
+
+## Scene 3: Rich Text Editing (0:45 - 1:30)
+
+**Voiceover**: "Clicking a document opens the rich text editor. The toolbar supports bold, italic, underline, three heading levels, paragraph text, bulleted lists, and numbered lists."
+
+**Actions**:
+- Click "Welcome Document"
+- Show the rendered content with headings, bold, italic, underline, bulleted list
+- Highlight some text and click Bold — text becomes bold
+- Click H2 — text becomes a level-2 heading
+- Add a new line, click the bullet list button, type a few items
+- Show the "Saved" indicator appearing after typing
+- Press Ctrl+S — show the immediate save confirmation
+
+---
+
+## Scene 4: Create & Rename & Delete (1:30 - 2:00)
+
+**Voiceover**: "Creating a new document is one click. You can rename it inline, or delete it entirely."
+
+**Actions**:
+- Click the "+ New" button in the sidebar
+- A new "Untitled" document appears and opens
+- Click the pencil icon next to it
+- Type "Project Proposal" and press Enter
+- Note the rename persists
+- Type some content in the editor
+- Close by clicking another document, reopen "Project Proposal" — content preserved
+
+---
+
+## Scene 5: Markdown Upload (2:00 - 2:30)
+
+**Voiceover**: "You can upload a Markdown file to create a new document. The formatting is converted automatically."
+
+**Actions**:
+- Click "Upload .md" button in sidebar
+- Select a `.md` file from the file picker (or create one quickly)
+- Show the new document appears in the list with the filename as title
+- Click it — headings, lists, bold/italic all rendered correctly
+
+---
+
+## Scene 6: File Attachments & Import (2:30 - 3:10)
+
+**Voiceover**: "Each document can have file attachments. You can also import a file's content directly into an existing document."
+
+**Actions**:
+- Click the "Attachments" tab in the right panel
+- Click "+ Upload File", select any file
+- File appears in the list with name and size — clickable to download
+- Click "Import into doc" button, select a .md or .txt file
+- Content is appended to the document with a separator
+- Delete an attachment with the X button
+
+---
+
+## Scene 7: Sharing (3:10 - 4:00)
+
+**Voiceover**: "Documents can be shared with other users. Let me share this with Bob."
+
+**Actions**:
+- Click the "Sharing" tab in the right panel
+- Select "bob (Bob Smith)" from the dropdown
+- Keep "Can view" selected, click "Share"
+- Bob appears in the shared list
+- **Switch browser** — open incognito or different browser
+- Login as "bob" / "password123"
+- Show the shared document appears under "Shared With Me"
+- Note the "Can view" badge (not "Owner")
+- Open the document — Bob can read it
+- Try to share or delete the document — not allowed (owner-only)
+- **Switch back to Alice**, change Bob's permission to "Can edit", click Share
+- **Switch to Bob**, refresh — now shows "Can edit"
+- Bob can now edit the document
+- **Switch back to Alice**, click the X next to Bob to revoke
+- **Switch to Bob**, refresh — document no longer accessible
+
+---
+
+## Scene 8: Session Persistence (4:00 - 4:30)
+
+**Voiceover**: "The application persists data across browser sessions. Watch."
+
+**Actions**:
+- Refresh the browser page (F5)
+- Alice is still logged in, documents still visible
+- Open a document — formatting and content preserved
+- Sign out, sign back in — everything is still there
+- Note the SQLite database file retains all data
+
+---
+
+## Scene 9: Closing (4:30 - 4:45)
+
+**Voiceover**: "That's DocEditor — a full document editing experience with sharing, attachments, markdown support, and persistent storage. All built with React, TipTap, Express, and SQLite."
+
+**Actions**:
+- Show the clean interface one last time
+- End recording
